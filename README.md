@@ -1,4 +1,3 @@
-# 🇭🇺 Netflix Magyar Frontend
 
 Üdvözöllek a **Netflix HU** projektben!  
 
