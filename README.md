@@ -20,7 +20,7 @@ Célja egy letisztult, felhasználóbarát felület létrehozása, amely követi
 - Tailwind CSS
 - React
 - Headless UI
-- .Env
+- .env.local (NYITOTT)
 
 
 ---
