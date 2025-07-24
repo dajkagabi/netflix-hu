@@ -1,9 +1,7 @@
 @import "tailwindcss";
 
-
-
 body {
-  background-color: #141414;
+  
   color: white;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-family: Netflix Sans - sans-serif;
 }

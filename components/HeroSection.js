@@ -25,7 +25,7 @@ export default function HeroSection() {
               placeholder="E-mail-cím" 
               className="px-4 py-3 md:w-96 bg-black bg-opacity-70 border border-gray-600 rounded text-white"
             />
-            <button className="bg-netflix-red text-white px-6 py-3 rounded font-bold text-xl">
+            <button className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded font-medium transition-colors duration-200">
               Első lépések &gt;
             </button>
           </div>
