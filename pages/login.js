@@ -1,26 +1,26 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import { useState } from 'react'
-import { useRouter } from 'next/router'
-import hero from '../public/images/hero.jpg'
-import Image from "next/image"; 
-import netflix from "../public/images/netflix.svg"; 
+import Head from "next/head";
+import Link from "next/link";
+import { useState } from "react";
+import { useRouter } from "next/router";
+import hero from "../public/images/hero.jpg";
+import Image from "next/image";
+import netflix from "../public/images/netflix.svg";
 
 export default function Login() {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const [error, setError] = useState('')
-  const router = useRouter()
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const router = useRouter();
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setError('')
+    e.preventDefault();
+    setError("");
     if (!email || !password) {
-      setError('Kérjük, töltsd ki mindkét mezőt!')
-      return
+      setError("Kérjük, töltsd ki mindkét mezőt!");
+      return;
     }
-    router.push('/browse')
-  }
+    router.push("/browse");
+  };
 
   return (
     <div className="relative min-h-screen bg-black text-white">
@@ -28,7 +28,6 @@ export default function Login() {
         <title>Netflix - Bejelentkezés</title>
       </Head>
 
-     
       <div>
         <Image
           src={hero}
@@ -40,19 +39,17 @@ export default function Login() {
         />
       </div>
 
-   
       <div className="relative z-10 flex flex-col min-h-screen">
-       
         <div className="px-6 py-6">
           <Link href="/" className="text-[#E50914] font-extrabold text-3xl">
-              <Image
-                      src={netflix}
-                      alt="Netflix Logo"
-                      width={90} 
-                      height={30} 
-                      priority 
-                      className="cursor-pointer" 
-                    />
+            <Image
+              src={netflix}
+              alt="Netflix Logo"
+              width={90}
+              height={30}
+              priority
+              className="cursor-pointer"
+            />
           </Link>
         </div>
 
@@ -105,7 +102,9 @@ export default function Login() {
                     id="remember"
                     className="h-4 w-4 rounded border-gray-300 text-[#E50914] focus:ring-[#E50914]"
                   />
-                  <label htmlFor="remember" className="text-gray-300">Emlékezzen rám</label>
+                  <label htmlFor="remember" className="text-gray-300">
+                    Emlékezzen rám
+                  </label>
                 </div>
 
                 <Link href="#" className="text-gray-400 hover:underline">
@@ -116,14 +115,15 @@ export default function Login() {
 
             <div className="mt-10 text-gray-400 text-sm">
               <p className="mb-4">
-                Új vagy a Netflixen?{' '}
+                Új vagy a Netflixen?{" "}
                 <Link href="/register" className="text-white hover:underline">
                   Regisztrálj most.
                 </Link>
               </p>
 
               <p className="text-xs">
-                Az oldal Google reCAPTCHA funkció használatával győződik meg róla, hogy nem vagy robot.{' '}
+                Az oldal Google reCAPTCHA funkció használatával győződik meg
+                róla, hogy nem vagy robot.{" "}
                 <Link href="#" className="text-blue-500 hover:underline">
                   További információk.
                 </Link>
@@ -134,7 +134,9 @@ export default function Login() {
 
         <footer className="bg-black bg-opacity-75 py-6 px-4 border-t border-gray-800">
           <div className="max-w-6xl mx-auto text-gray-400 text-sm">
-            <p className="mb-4">Kérdésed van? Hívd a(z) 06 80 993 056 telefonszámot</p>
+            <p className="mb-4">
+              Kérdésed van? Hívd a(z) 06 80 993 056 telefonszámot
+            </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-xs">
               <div>
                 <p className="text-gray-300 mb-2">GYIK</p>
@@ -168,5 +170,5 @@ export default function Login() {
         </footer>
       </div>
     </div>
-  )
+  );
 }
