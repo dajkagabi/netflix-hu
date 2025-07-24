@@ -11,7 +11,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ["Netflix Sans - sans-serif"],
+        sans: ["Netflix Sans" - "sans-serif"],
       },
     },
   },
